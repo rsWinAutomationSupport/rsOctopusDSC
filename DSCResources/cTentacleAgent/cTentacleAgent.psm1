@@ -18,10 +18,8 @@ function Get-TargetResource{
         [string]$DefaultApplicationDirectory,
         [int]$ListenPort,
         [ValidateSet("named","detect","natted")]
-        $nicType="detect",
-        $nicName=$null
-        <#[string]$RegisteredNic,
-        [bool]$isNatted=$false#>
+        [string]$nicType="detect",
+        [string]$nicName=$null
     )
 
     Write-Verbose "Checking if Tentacle is installed"
@@ -81,10 +79,8 @@ function Set-TargetResource{
         [string]$DefaultApplicationDirectory = "$($env:SystemDrive)\Applications",
         [int]$ListenPort = 10933,
         [ValidateSet("named","detect","natted")]
-        $nicType="detect",
-        $nicName=$null
-        <#[string]$RegisteredNic,
-        [bool]$isNatted=$false#>
+        [string]$nicType="detect",
+        [string]$nicName=$null
    )
 
     if ($Ensure -eq "Absent" -and $State -eq "Started") 
@@ -170,10 +166,8 @@ function Test-TargetResource{
         [string]$DefaultApplicationDirectory,
         [int]$ListenPort,
         [ValidateSet("named","detect","natted")]
-        $nicType="detect",
-        $nicName=$null
-        <#[string]$RegisteredNic,
-        [bool]$isNatted=$false#>
+        [string]$nicType="detect",
+        [string]$nicName=$null
     )
  
     $currentResource = (Get-TargetResource -Name $Name)
