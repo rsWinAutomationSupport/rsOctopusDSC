@@ -346,10 +346,8 @@ function New-Tentacle{
         [string[]]$roles,
         [int] $port,
         [ValidateSet("named","detect","natted")]
-        $nicType="detect",
-        $nicName=$null,
-        #[string]$RegisteredNic,
-        #[bool]$isNatted=$false,
+        [string]$nicType="detect",
+        [string]$nicName=$null,
         [string]$DefaultApplicationDirectory
     )
  
