@@ -42,7 +42,7 @@ Configuration SampleConfig
 
             # Registration - all parameters required
             ApiKey = "API-ABCDEF12345678910"
-            OctopusServerUrl = "https://demo.octopusdeploy.com/"
+            OctopusServerUrl = "https://demo.octopusdeploy.com" #Please ensure there is no trailing forward slash in the URL
             Environments = "Staging"
             Roles = @("web-server", "app-server")
 
